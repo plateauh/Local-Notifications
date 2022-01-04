@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		B5ECE1202784B30D005CF39E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECE11F2784B30D005CF39E /* AppDelegate.swift */; };
 		B5ECE1222784B30D005CF39E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECE1212784B30D005CF39E /* SceneDelegate.swift */; };
-		B5ECE1242784B30D005CF39E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECE1232784B30D005CF39E /* ViewController.swift */; };
+		B5ECE1242784B30D005CF39E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECE1232784B30D005CF39E /* TimerViewController.swift */; };
 		B5ECE1272784B30D005CF39E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5ECE1252784B30D005CF39E /* Main.storyboard */; };
 		B5ECE1292784B30E005CF39E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5ECE1282784B30E005CF39E /* Assets.xcassets */; };
 		B5ECE12C2784B30E005CF39E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5ECE12A2784B30E005CF39E /* LaunchScreen.storyboard */; };
 		B5ECE1372784B30F005CF39E /* LocalNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECE1362784B30F005CF39E /* LocalNotificationsTests.swift */; };
 		B5ECE1412784B30F005CF39E /* LocalNotificationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECE1402784B30F005CF39E /* LocalNotificationsUITests.swift */; };
 		B5ECE1432784B30F005CF39E /* LocalNotificationsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECE1422784B30F005CF39E /* LocalNotificationsUITestsLaunchTests.swift */; };
+		B5ECE1502784CA1E005CF39E /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECE14F2784CA1E005CF39E /* LogViewController.swift */; };
+		B5ECE1522784F8CE005CF39E /* TimeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECE1512784F8CE005CF39E /* TimeHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 		B5ECE11C2784B30D005CF39E /* LocalNotifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotifications.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5ECE11F2784B30D005CF39E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5ECE1212784B30D005CF39E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B5ECE1232784B30D005CF39E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5ECE1232784B30D005CF39E /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		B5ECE1262784B30D005CF39E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5ECE1282784B30E005CF39E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5ECE12B2784B30E005CF39E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		B5ECE13C2784B30F005CF39E /* LocalNotificationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalNotificationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5ECE1402784B30F005CF39E /* LocalNotificationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsUITests.swift; sourceTree = "<group>"; };
 		B5ECE1422784B30F005CF39E /* LocalNotificationsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B5ECE14F2784CA1E005CF39E /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		B5ECE1512784F8CE005CF39E /* TimeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 			children = (
 				B5ECE11F2784B30D005CF39E /* AppDelegate.swift */,
 				B5ECE1212784B30D005CF39E /* SceneDelegate.swift */,
-				B5ECE1232784B30D005CF39E /* ViewController.swift */,
+				B5ECE1232784B30D005CF39E /* TimerViewController.swift */,
 				B5ECE1252784B30D005CF39E /* Main.storyboard */,
 				B5ECE1282784B30E005CF39E /* Assets.xcassets */,
 				B5ECE12A2784B30E005CF39E /* LaunchScreen.storyboard */,
 				B5ECE12D2784B30E005CF39E /* Info.plist */,
+				B5ECE14F2784CA1E005CF39E /* LogViewController.swift */,
+				B5ECE1512784F8CE005CF39E /* TimeHandler.swift */,
 			);
 			path = LocalNotifications;
 			sourceTree = "<group>";
@@ -258,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5ECE1242784B30D005CF39E /* ViewController.swift in Sources */,
+				B5ECE1242784B30D005CF39E /* TimerViewController.swift in Sources */,
 				B5ECE1202784B30D005CF39E /* AppDelegate.swift in Sources */,
 				B5ECE1222784B30D005CF39E /* SceneDelegate.swift in Sources */,
+				B5ECE1522784F8CE005CF39E /* TimeHandler.swift in Sources */,
+				B5ECE1502784CA1E005CF39E /* LogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
