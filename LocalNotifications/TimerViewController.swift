@@ -11,6 +11,7 @@ class TimerViewController: UIViewController {
 
     var totalHours = 0
     var totalmins = 0
+    var log = [(String, String)]()
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
@@ -37,7 +38,7 @@ class TimerViewController: UIViewController {
 
     @IBAction func newDayButtonPressed(_ sender: UIButton) {
         // show alert
-        // clear log
+        log.removeAll()
         if timerButton.tag == 1 {
             timerButton.tag = 0
             timerButton.setTitle("Start Timer", for: .normal)
@@ -45,6 +46,13 @@ class TimerViewController: UIViewController {
             handleTimer(with: (totalHours, totalmins), isEnable: false)
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let barViewControllers = tabBarController?.viewControllers
+        let lvc = barViewControllers![1] as! LogViewController
+        lvc.log = log
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,18 +67,26 @@ class TimerViewController: UIViewController {
             titleLabel.text = "Timer set for \(hoursMins.0) hour(s),\(hoursMins.1) mins"
             let workUntil = TimeHandler.addToCurrentTime(hours: hoursMins.0, minutes: hoursMins.1)
             untilLabel.text = "Work until \(workUntil.0):\(workUntil.1)"
+            pushToLog(until: workUntil, duration: hoursMins)
         } else {
             totalHours -= hoursMins.0
             totalmins -= hoursMins.1
             timerPicker.isEnabled = true
             untilLabel.isHidden = true
             titleLabel.text = "Set the timer"
+            if !log.isEmpty {
+                log.removeLast()
+            }
         }
         totalLabel.text = "Total time: \(totalHours) hour(s), \(totalmins) minutes"
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-        }
+    func pushToLog(until: (Int, Int), duration: (Int, Int)) {
+        let currentTime = TimeHandler.getCurrentTime()
+        let logTitle = "\(currentTime.0):\(currentTime.1) - \(until.0):\(until.1)"
+        let logSubtitle = "\(duration.0) hour(s), \(duration.1) minute(s) timer"
+        log.append((logTitle, logSubtitle))
+    }
+
 }
 
