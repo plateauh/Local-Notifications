@@ -51,14 +51,14 @@ class TimerViewController: UIViewController {
     }
     
     func handleTimer(with hoursMins: (Int, Int), isEnable: Bool) {
-        let currentTime = TimeHandler.getCurrentTime()
         if isEnable {
             totalHours += hoursMins.0
             totalmins += hoursMins.1
             timerPicker.isEnabled = false
             untilLabel.isHidden = false
             titleLabel.text = "Timer set for \(hoursMins.0) hour(s),\(hoursMins.1) mins"
-            untilLabel.text = "Work until..."
+            let workUntil = TimeHandler.addToCurrentTime(hours: hoursMins.0, minutes: hoursMins.1)
+            untilLabel.text = "Work until \(workUntil.0):\(workUntil.1)"
         } else {
             totalHours -= hoursMins.0
             totalmins -= hoursMins.1

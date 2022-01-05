@@ -25,4 +25,18 @@ class TimeHandler {
         let minute = calendar.component(.minute, from: date)
         return (hour, minute)
     }
+    
+    static func addToCurrentTime(hours: Int, minutes: Int) -> (Int, Int) {
+        let current = getCurrentTime()
+        var h = current.0 + hours
+        var m = current.1 + minutes
+        if h > 23 {
+            h -= 24
+        }
+        if m > 59 {
+            m -= 60
+            h += 1
+        }
+        return (h, m)
+    }
 }
