@@ -39,4 +39,24 @@ class TimeHandler {
         }
         return (h, m)
     }
+    
+    static func toString(time: (Int, Int)) -> String {
+        var stringForm = ""
+        
+        if time.0 < 10 {
+            stringForm += "0\(time.0)"
+        } else {
+            stringForm += "\(time.0)"
+        }
+        
+        stringForm += ":"
+        
+        if time.1 < 10 {
+            stringForm += "0\(time.1)"
+        } else {
+            stringForm += "\(time.1)"
+        }
+        
+        return stringForm
+    }
 }
