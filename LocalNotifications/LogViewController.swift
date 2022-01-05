@@ -17,12 +17,10 @@ class LogViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
-            print(log)
             tableView.reloadData()
         }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return log.count
     }
 
